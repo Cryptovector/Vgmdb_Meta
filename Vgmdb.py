@@ -56,7 +56,7 @@ def Meta_rename(tree, Path, CD_Number, Metainfo, Art):
 					Music_File['totaltracks'] = str(len(Files))
 					Music_File['totaldiscs'] = str(len(tree.xpath(S_path_4)))
 					Music_File['discnumber'] = str(CD_Number)
-					Music_File['album'] = tree.xpath('/html/body/div[4]/table/tr[1]/td[1]/div/h1/span[1]')[0].text_content()
+					Music_File['album'] = tree.xpath(S_path+'h1/span[1]')[0].text_content()
 					try:
 						Music_File['genre'] = Metainfo_list['Classification']
 					except:
